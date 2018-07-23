@@ -1,0 +1,107 @@
+<div class="wrapper"
+     fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="16px"
+     fxLayoutGap.xs="0px">
+
+  <div fxFlex="59">
+    <mat-card>
+      <mat-card-content>
+        <p class="intro">
+          The Family Growth Fund seeks to outperform an index composed of large- capitalization U.S. equities and emerging market equities. The Fund is a ‘one- stop shop’, seeking to provide balanced risk adjusted returns by investing in stock, bonds and cash. It is intended to provide young families with the growth they need to pay for their children’s future while not jeopardizing their finances. As younger clients have higher risk appetites and college tuition is increasing rapidly, Family Growth Fund estimates its active risk as 12.08% to match this moderately aggressive risk appetite. The Fund holds 88% Equities, including Alternative groups, and 12% Fixed Income.
+        </p>
+        <p class="intro">
+          In order to attain that risk, Family Growth Fund invests in emerging markets that look primed for growth. The fund also invests in U.S. infrastructure, predicting that a future need for infrastructure updates will bolster not only industrials but also technology as the need for IT infrastructure grows. As families might be wary of too much risk, the fund allocates to Financial Services and Real Estate. Both of the bets bring the risk adjusted predicted return to 8.32%, with the financial sector hedging against a crisis and real estate diversifying the assets.
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <div class="gray">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>WHY FGF?</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="why-fgf">
+            <p mat-line><span class="num">1.</span>Exposure to a broad range of developed and emerging market companies.</p>
+            <p mat-line><span class="num">2.</span>Seeks to balance risk and return by investing in stocks, bonds and cash.</p>
+            <p mat-line><span class="num">3.</span>Leverages the best of BlackRock’s economic insights.</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>HYPOTHETICAL GROWTH OF 10,000 USD</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <img src="../../assets/hypothetical_growth.png">
+      </mat-card-content>
+    </mat-card>
+
+    <div class="gray">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>TOP SECTORS (%)</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item *ngFor="let sector of sectors">
+              <p mat-line class="list-name" [class.bold-item]="sector.isBold">{{sector.name}}</p>
+              <span class="list-value" [class.bold-item]="sector.isBold">{{sector.value}}</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+
+  <div fxFlex="37" class="gray">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>KEY FACTS</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let fact of key_facts">
+              <p mat-line class="list-name">{{fact.name}}</p>
+              <span class="list-value">{{fact.value}}</span>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>REGION BREAKDOWN (%)</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let region of regions">
+              <p mat-line class="list-name" [class.bold-item]="region.isBold">{{region.name}}</p>
+              <span class="list-value" [class.bold-item]="region.isBold">{{region.value}}</span>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>ASSET ALLOCATION (%)</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let alloc of allocations">
+              <p mat-line class="list-name" [class.bold-item]="alloc.isBold">{{alloc.name}}</p>
+              <span class="list-value" [class.bold-item]="alloc.isBold">{{alloc.value}}</span>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+</div>
